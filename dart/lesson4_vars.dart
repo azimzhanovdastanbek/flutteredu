@@ -1,15 +1,5 @@
-/// Документация
+/// Переменные
 void main() {
-  /*
-Number
-Strings
-Boolean
-Lists
-Maps
-Runes
-Symbols
-*/
-
   //Number
   const int numberConstInt = 4;
   dynamic numberDynamicDouble = numberConstInt + 1.1;
@@ -21,7 +11,8 @@ Symbols
   //Strings
   const String strConstString = "Hello ";
   var strVarString = 'world';
-  dynamic strDynamicString = "!";
+  dynamic strDynamicString = '''!
+  New Line''';
   String strFinalStringAndConCat = strConstString + strVarString;
   final String strFinalStringAndConCatInter =
       '$strFinalStringAndConCat$strDynamicString';
@@ -54,7 +45,6 @@ Symbols
 
   //Runes
   Runes runesText = new Runes('үңкүргө');
-  print(runesText);
   print('Runes symbols: $runesText');
   print('Runes text: ' + String.fromCharCodes(runesText));
 }
