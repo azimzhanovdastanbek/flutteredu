@@ -21,13 +21,8 @@ void main() {
   //Lists
   List listArrayNumbers = [9, 8, 7, 6, 5, 4, 3, 2, 1, 0];
   List listArrayStrings = ['One', 'Two', 'Three'];
-  List listArrayNull = [];
   List listArrayInArray = [listArrayNumbers, listArrayStrings];
-  List listArrayMap = [
-    {'One': '1'},
-    {'One': '2'},
-    {'One': '3'}
-  ];
+
   print('List: ');
   print(listArrayInArray);
 
