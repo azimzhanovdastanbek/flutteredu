@@ -18,13 +18,6 @@ void main() {
       '$strFinalStringAndConCat$strDynamicString';
   print('String: $strFinalStringAndConCatInter');
 
-  //Boolean
-  const bool boolConstTrue = true;
-  var boolVarFalse = false;
-  dynamic boolDynamicTrue = true;
-  final bool boolFinalTrue = true;
-  bool boolFalse = false;
-
   //Lists
   List listArrayNumbers = [9, 8, 7, 6, 5, 4, 3, 2, 1, 0];
   List listArrayStrings = ['One', 'Two', 'Three'];
