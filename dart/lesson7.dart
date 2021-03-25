@@ -148,11 +148,15 @@ void main() {
   String city = 'Ankara';
   List symbols = city.toLowerCase().split("");
   Map symbolsCount = {};
-  symbols.forEach((arrayItem) {
-    symbolsCount[arrayItem] = 0;
-  });
-  symbols.forEach((arrayItem) {
-    symbolsCount[arrayItem] += 1;
-  });
+  var i = 0;
+  while (i < symbols.length) {
+    symbolsCount[symbols[i]] = 0;
+    i++;
+  }
+  i = 0;
+  while (i < symbols.length) {
+    symbolsCount[symbols[i]] += 1;
+    i++;
+  }
   print(symbolsCount);
 }
