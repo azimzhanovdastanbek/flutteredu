@@ -8,7 +8,7 @@
 			"name": "Dart & Flutter",
 			"request": "launch",
 			"type": "dart",
-			"program": "./dart/lesson6.dart",
+			"program": "./dart/lesson7.dart",
 			"console": "terminal"
 		}
 	]
