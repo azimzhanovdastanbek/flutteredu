@@ -1,10 +1,17 @@
 void main() {
-  print(reverse(123));
-  List<int> a = [1, 2, 4];
-  List<int> b = [1, 3, 4];
-  print(arrayMergeSort(a, b));
-  print(arraySum([2, 7, 11, 15], 9));
-  print(arraySum([2, 7, 11, 15], 18));
+  print(checkSkobki("()"));
+//Output: true
+//Example 2:
+  print(checkSkobki("()[]{}"));
+//Output: true
+//Example 3:
+  print(checkSkobki("(]"));
+//Output: false
+//Example 4:
+  print(checkSkobki("([)]"));
+//Output: false
+//Example 5:
+  print(checkSkobki("{[]}"));
 }
 
 List arraySum(List nums, int target) {
@@ -34,4 +41,32 @@ int reverse(int input_number) {
     text = element + text;
   }
   return int.parse(text);
+}
+
+bool checkSkobki(String s) {
+  Map skobki = {
+    ')': '(',
+    ']': '[',
+    '}': '{',
+  };
+  List last = [];
+  int kol = 0;
+  for (final v in s.split("")) {
+    if (skobki.containsValue(v)) {
+      kol += 1;
+      last.add(v);
+    } else {
+      if (last.last == skobki[v]) {
+        kol -= 1;
+        last.removeLast();
+      } else {
+        return false;
+      }
+    }
+  }
+  if (kol == 0) {
+    return true;
+  } else {
+    return false;
+  }
 }
